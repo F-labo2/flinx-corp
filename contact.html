@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 株式会社F-LINX</title>
+  <meta name="description" content="株式会社F-LINXへのお問い合わせはこちらから。お問い合わせフォームよりお気軽にお寄せください。">
+  <link rel="icon" type="image/png" href="assets/images/rogo1.png">
+  <link rel="apple-touch-icon" href="assets/images/rogo1.png">
+  <meta property="og:title" content="お問い合わせ | 株式会社F-LINX">
+  <meta property="og:description" content="株式会社F-LINXへのお問い合わせはこちらから。お問い合わせフォームよりお気軽にお寄せください。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__SITE_URL__">
+  <meta property="og:image" content="assets/images/京阪神_神戸_.jpg">
+  <meta property="og:site_name" content="株式会社F-LINX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="お問い合わせ | 株式会社F-LINX">
+  <meta name="twitter:description" content="株式会社F-LINXへのお問い合わせはこちらから。お問い合わせフォームよりお気軽にお寄せください。">
+  <meta name="twitter:image" content="assets/images/京阪神_神戸_.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-main: #2C3E50;
+      --color-accent: #D4A056;
+      --color-sub: #F8F4ED;
+      --color-text: #2A2A2A;
+      --color-muted: #5C6470;
+      --color-border: #E5DFD4;
+      --color-white: #FFFFFF;
+      --shadow-card: 0 8px 22px rgba(44, 62, 80, 0.10);
+      --shadow-soft: 0 10px 28px rgba(44, 62, 80, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--color-text);
+      font-family: "Noto Sans JP", "Hiragino Sans", "Meiryo", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      background: var(--color-white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    .container {
+      width: min(100% - 40px, 1100px);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .heading-lg {
+      margin: 0;
+      color: var(--color-main);
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+    }
+
+    .heading-md {
+      position: relative;
+      margin: 0 0 22px;
+      padding-bottom: 14px;
+      color: var(--color-main);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    .heading-md::after,
+    .section-line {
+      display: block;
+      width: 64px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--color-accent);
+      content: "";
+    }
+
+    .heading-md::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .section-label {
+      margin: 0 0 8px;
+      color: var(--color-accent);
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--color-border);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 24px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      min-width: 120px;
+      color: var(--color-main);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .logo-image {
+      width: auto;
+      height: 36px;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      color: var(--color-muted);
+      font-weight: 700;
+    }
+
+    .site-nav a {
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible,
+    .site-nav a[aria-current="page"] {
+      color: var(--color-main);
+      border-bottom-color: var(--color-accent);
+    }
+
+    .page-title {
+      padding: 88px 0 70px;
+      background: linear-gradient(180deg, var(--color-sub) 0%, #FFFFFF 100%);
+      text-align: center;
+    }
+
+    .page-title .section-line {
+      margin: 22px auto 0;
+    }
+
+    .intro-section {
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--color-text);
+      font-size: 18px;
+    }
+
+    .form-section {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-white);
+    }
+
+    .form-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .form-frame {
+      display: block;
+      width: 100%;
+      min-height: 1200px;
+      margin-top: 26px;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      background: var(--color-white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-note {
+      margin: 14px 0 0;
+      color: var(--color-muted);
+      font-size: 14px;
+    }
+
+    .site-footer {
+      background: var(--color-main);
+      color: var(--color-white);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      padding: 42px 0 30px;
+    }
+
+    .footer-company {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .footer-info {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .footer-nav {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 16px 22px;
+      font-weight: 700;
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .copyright {
+      margin: 0;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: min(100% - 28px, 1100px);
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .heading-lg {
+        font-size: 32px;
+      }
+
+      .heading-md {
+        font-size: 24px;
+      }
+
+      .header-inner {
+        min-height: auto;
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .site-nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        font-size: 14px;
+      }
+
+      .site-nav a {
+        padding: 10px 0;
+        border-bottom: 0;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .page-title {
+        padding: 64px 0 50px;
+      }
+
+      .intro-text {
+        font-size: 16px;
+      }
+
+      .form-frame {
+        min-height: 1200px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-nav {
+        justify-content: flex-start;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .form-frame,
+      .reveal {
+        transition: none;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-link" href="index.html" aria-label="株式会社F-LINX トップページ">
+        <img class="logo-image" src="assets/images/rogo1.png" alt="株式会社F-LINX">
+      </a>
+
+      <nav class="site-nav" aria-label="グローバルナビゲーション">
+        <a href="index.html">トップ</a>
+        <a href="about.html">会社概要</a>
+        <a href="services.html">事業内容</a>
+        <a href="contact.html" aria-current="page">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title reveal">
+      <div class="container">
+        <h1 class="heading-lg">お問い合わせ</h1>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="section intro-section reveal">
+      <div class="container">
+        <p class="intro-text">ご質問・ご相談はお問い合わせフォームよりお気軽にお寄せください。通常2〜3営業日以内にご返信いたします。</p>
+      </div>
+    </section>
+
+    <section class="section form-section reveal">
+      <div class="container">
+        <div class="form-wrap">
+          <p class="section-label">INQUIRY FORM</p>
+          <h2 class="heading-md">お問い合わせフォーム</h2>
+          <iframe class="form-frame reveal" src="https://docs.google.com/forms/d/e/1FAIpQLScdliN23597Uw2y4eo-bpsWquCtqgBUV9RSaVGYaiDF6O8b9g/viewform?embedded=true" width="100%" height="1200" title="お問い合わせフォーム">
+            読み込んでいます...
+          </iframe>
+          <p class="form-note">※ フォームが表示されない場合は、時間をおいて再度お試しください。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-company">株式会社F-LINX</p>
+        <p class="footer-info">神戸市中央区北長狭通五丁目2番19号</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="index.html">トップ</a>
+        <a href="about.html">会社概要</a>
+        <a href="services.html">事業内容</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="copyright">&copy; 2026 株式会社F-LINX</p>
+  </footer>
+  <script>
+    const revealTargets = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      revealTargets.forEach((target) => observer.observe(target));
+    } else {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
