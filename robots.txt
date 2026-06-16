@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://flinx-corp.weblab-jp.workers.dev/sitemap.xml
+Sitemap: https://flinx-corp.weblab-jp.workers.dev/sitemap.txt
