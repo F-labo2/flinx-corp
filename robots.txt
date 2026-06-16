@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flinx-corp.weblab-jp.workers.dev/sitemap.xml
